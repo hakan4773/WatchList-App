@@ -6,15 +6,17 @@ import Watchlist from './components/Watchlist';
 import Watched from './components/Watched'
 import Add from './components/Add';
 import { GlobalProvider } from './context/GlobalState';
+import PopulerFilms from './components/PopulerFilms';
 function App() {
   return (
 <GlobalProvider>
 <Router>  
 <Header />
 <Routes>
-<Route path="/" element={<Watchlist />} />
+<Route path="/" element={<PopulerFilms />} />
+<Route path="/add" element={<Add />} />
 <Route path="/watched" element={<Watched />} />
-<Route path="/Add" element={<Add />} />
+<Route path="/Watchlist" element={<Watchlist />} />
 </Routes>
    </Router>
 

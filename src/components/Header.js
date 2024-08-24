@@ -7,9 +7,11 @@ function Header() {
 <div className='container'>
 <div className='inner-content'> 
 <div className='brand'>
-    <Link to={"/"}>İzlenecekler</Link>
+    <Link to={"/watchlist"}>İzlenecekler</Link>
 </div>
-
+<div className='brand'>
+    <Link to={"/"}>Popüler Filmler</Link>
+</div>
 <ul className='nav-links'>
 <li>
 <Link to={"/watched"}>İzlenenler</Link>
@@ -19,6 +21,7 @@ function Header() {
     <i className='fas fa-plus'></i>
     </Link>
 </li>
+
 </ul>
 
 

@@ -16,28 +16,34 @@ const onchange=(e)=>
     .catch((error) => console.error('Error fetching data:', error));
 }
 
+
 return (
     <div className='add-page'>
       <div className='container'>
         <div className='add-content'>
 <img src='https://image.tmdb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/9ZyAUZrfccsjtDwYgc7yvOBnqM9.jpg' alt=''> 
 </img>
+
 <div className='titles'>
   <h1>Hoş Geldiniz.</h1>
   <h2>Milyonlarca film, TV şovu ve keşfedilecek kişi. Şimdi keşfedin.</h2>
   {query}
 </div>
+
 <div className='input-wrapper'>
 <input type='text'
 onChange={onchange}  
 value={query}
-placeholder='fil,dizi,kişi ara ...' />
+placeholder='film,dizi,kişi ara ...' />
 
 </div>
 
 {results.length > 0 && (
 <ul className='results'>
-{results.map((movie)=> <li key={movie.id}>{<ResultsCard movie={movie}/>}</li>
+{results.map((movie)=> <li key={movie.id}>{
+  <ResultsCard movie={movie}/> 
+  }
+  </li>
 
 )}
 

@@ -21,7 +21,6 @@ function ResultsCard({movie}) {
 }
         
       </div>
-
       <div className='info'>
         <div className='header'>
             <h3 className='title'>{movie.title}</h3>

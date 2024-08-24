@@ -2,7 +2,6 @@ import React,{useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 function MovieControls({movie,type}) {
     const {handleRemove,addtoWatched,addtoWatchList,handleRemoveWatched}=useContext(GlobalContext)
-
   return (
     <div className='inner-card-controls'>
         {type==="watchlist" && (

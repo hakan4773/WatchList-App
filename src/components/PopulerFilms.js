@@ -18,9 +18,9 @@ function PopulerFilms() {
 <div>
 <ul className='list'>
 {movies.map((movie, index) => (
-    <li key={`${movie.id}-${index}`}>
+    <li key={index}>
         {movie.poster_path ? (
-<Link to={"/add"}>
+        <Link to={"/add"}>
             <img 
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} 
                 alt={movie.original_title || 'Movie Poster'}
@@ -32,6 +32,7 @@ function PopulerFilms() {
         )}
     </li>
 ))}
+
 
 </ul>
 <div className='yukle'>

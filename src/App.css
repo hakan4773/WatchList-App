@@ -368,3 +368,16 @@ header .nav-links li:last-child {
    align-items: center;
    justify-content: center;
 }
+@media (max-width: 600px) {
+  .results {
+    justify-content: center; /* Center items on smaller screens */
+  }
+
+  .results li {
+    flex: 1 1 100px; /* Adjust flex-basis and max-width for smaller screens */
+    max-width: 100px;
+  }
+
+  .filler-poster {
+    height: 150px; /* Adjust height for smaller screens */
+  }}

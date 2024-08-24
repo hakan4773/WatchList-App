@@ -29,6 +29,9 @@ function MovieControls({movie,type}) {
 
     </div>
 
+
+
+
   )
 }
 

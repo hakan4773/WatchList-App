@@ -9,8 +9,9 @@ function Header() {
 <div className='brand'>
     <Link to={"/watchlist"}>İzlenecekler</Link>
 </div>
-<div className='brand'>
+<div className='brands'>
     <Link to={"/"}>Popüler Filmler</Link>
+    <Link to={"/populertv"}>Popüler Diziler</Link>
 </div>
 <ul className='nav-links'>
 <li>

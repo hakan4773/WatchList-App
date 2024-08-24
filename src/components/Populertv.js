@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-function PopulerFilms() {
+function Populertv() {
     const [movies, setMovies] = useState([]);
     const [count, setCount] = useState(1);
+console.log(movies)
     useEffect(() => {
-      axios(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TDMB_API}&language=en-US&page=${count}`)
+      axios(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TDMB_API}&language=en-US&page=${count}`)
         .then((res) =>
             setMovies((prevMovies) => [...prevMovies, ...res.data.results])
     ) 
@@ -19,7 +20,7 @@ function PopulerFilms() {
 {movies.map((movie, index) => (
     <li key={index}>
         {movie.poster_path ? (
-        <Link to={`https://www.themoviedb.org/movie/${movie.id}-${movie.title}`}>
+        <Link to={`https://www.themoviedb.org/tv/${movie.id}-${movie.title}`}>
             <img 
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} 
                 alt={movie.original_title || 'Movie Poster'}   >
@@ -30,7 +31,7 @@ function PopulerFilms() {
         ) : (
             <div className='filler-poster'></div>
         )}
-         <div className='populerlist'> <b> {movie.release_date ? "Yıl: "+ movie.release_date.substring(0,4) :"-" }  {movie.vote_average ? "IMDB: "+movie.vote_average.toFixed(1) : "-"} </b></div>{/* <br></br> {movie.title} */}
+         <div className='populerlist'> <b> {movie.first_air_date ? "Yıl: "+ movie.first_air_date.substring(0,4) :"-" }  {movie.vote_average ? "IMDB: "+movie.vote_average.toFixed(1) : "IMDB: -"} </b></div>{/* <br></br> {movie.title} */}
 
     </li>
 ))}
@@ -47,4 +48,4 @@ function PopulerFilms() {
   )
 }
 
-export default PopulerFilms
+export default Populertv

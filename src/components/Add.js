@@ -14,6 +14,14 @@ const onchange=(e)=>
   axios(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TDMB_API}&language=en-US&page=1&query=${e.target.value}`)
     .then((res) => setResults(res.data.results)) // Set the results state with the search results
     .catch((error) => console.error('Error fetching data:', error));
+
+
+    e.preventDefault();
+    setQuery(e.target.value);
+    axios(`https://api.themoviedb.org/3/search/tv?api_key=${process.env.REACT_APP_TDMB_API}&language=en-US&page=1&query=${e.target.value}`)
+      .then((res) => setResults(res.data.results)) // Set the results state with the search results
+      .catch((error) => console.error('Error fetching data:', error));
+
 }
 
 

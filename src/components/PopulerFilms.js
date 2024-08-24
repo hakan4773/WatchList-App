@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function PopulerFilms() {
     const [movies, setMovies] = useState([]);
     const [count, setCount] = useState(1);
-
+console.log(movies)
     useEffect(() => {
       axios(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TDMB_API}&language=en-US&page=${count}`)
         .then((res) =>
@@ -20,11 +20,14 @@ function PopulerFilms() {
 {movies.map((movie, index) => (
     <li key={index}>
         {movie.poster_path ? (
-        <Link to={"/add"}>
+        <Link to={`https://www.themoviedb.org/movie/${movie.id}-${movie.title}`}>
+            
             <img 
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} 
-                alt={movie.original_title || 'Movie Poster'}
-            />
+                alt={movie.original_title || 'Movie Poster'}   >
+                    
+         </img>
+
             </Link>
 
         ) : (

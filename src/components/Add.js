@@ -1,6 +1,8 @@
 import React, {useState } from 'react'
 import axios from 'axios'
 import ResultsCard from './ResultsCard'
+import {FloatButton } from 'antd';
+
 function Add() {
 
 
@@ -65,6 +67,8 @@ placeholder='film,dizi,kişi ara ...' />
 
 
       </div>
+<FloatButton.BackTop />
+
     </div>
   )
 }

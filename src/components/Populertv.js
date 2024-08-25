@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import {FloatButton } from 'antd';
+
 function Populertv() {
     const [movies, setMovies] = useState([]);
     const [count, setCount] = useState(1);
@@ -43,6 +45,7 @@ console.log(movies)
 <div className='yukle'>
 <button className='btn' onClick={()=>setCount(count+1)}>Daha Fazla Gör</button>
 </div>
+<FloatButton.BackTop />
 
     </div>
   )

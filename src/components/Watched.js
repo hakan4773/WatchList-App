@@ -2,6 +2,8 @@ import React from 'react'
 import { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 import MovieCard from './MovieCard'
+import {FloatButton } from 'antd';
+
 function Watched() {
   const {watchedFilms} =useContext(GlobalContext)
   return (
@@ -22,6 +24,8 @@ function Watched() {
  
   
 </div>
+<FloatButton.BackTop />
+
     </div>
   )
 }

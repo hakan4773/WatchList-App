@@ -46,9 +46,8 @@ console.log(movies)
 <button className='btn' onClick={()=>setCount(count+1)}>Daha Fazla Gör</button>
 </div>
 <FloatButton.BackTop />
-
     </div>
   )
 }
 
-export default Populertv
+export default React.memo(Populertv)

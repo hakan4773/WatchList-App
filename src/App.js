@@ -8,11 +8,14 @@ import Add from './components/Add';
 import { GlobalProvider } from './context/GlobalState';
 import PopulerFilms from './components/PopulerFilms';
 import Populertv from './components/Populertv';
+
+
 function App() {
   return (
 <GlobalProvider>
 <Router>  
 <Header />
+
 <Routes>
 <Route path="/" element={<PopulerFilms />} />
 <Route path="/Populertv" element={<Populertv />} />
@@ -22,7 +25,6 @@ function App() {
 <Route path="/Watchlist" element={<Watchlist />} />
 </Routes>
    </Router>
-
 </GlobalProvider>
 
  

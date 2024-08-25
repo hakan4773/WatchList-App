@@ -1,7 +1,6 @@
 import React,{useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 import MovieCard from './MovieCard';
-import {FloatButton } from 'antd';
 
 function Watchlist({movie}) {
   const {watchlist}=useContext(GlobalContext)
@@ -23,7 +22,6 @@ function Watchlist({movie}) {
  
   
 </div>
-<FloatButton.BackTop />
 
     </div>
   )

@@ -24,7 +24,7 @@ function PopulerFilms() {
         <Link to={`https://www.themoviedb.org/movie/${movie.id}-${movie.title}`}>
             <img 
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} 
-                alt={movie.original_title || 'Movie Poster'}   >
+                alt={movie.original_title || 'Movie Poster'} loading="lazy"   >
            </img>
 
             </Link>
@@ -50,4 +50,4 @@ function PopulerFilms() {
   )
 }
 
-export default PopulerFilms
+export default React.memo(PopulerFilms)
